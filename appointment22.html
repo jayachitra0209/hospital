@@ -1,0 +1,92 @@
+
+<html>
+<head>
+<title> APJ Hospital </title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+function validate()
+{
+if( document.myForm.Name.value == "" )
+{
+alert( "Please provide your name!" );
+document.myForm.Name.focus() ;
+return false;
+}
+if( document.myForm.EMail.value == "" )
+{
+alert( "Please provide your Email!" );
+document.myForm.EMail.focus() ;
+return false;
+}
+var emailID = document.myForm.EMail.value;
+atpos = emailID.indexOf("@");
+dotpos = emailID.lastIndexOf(".");
+if (atpos < 1 || ( dotpos - atpos < 2 ))
+{
+alert("Please enter correct email ID")
+document.myForm.EMail.focus() ;
+return false;
+}
+return (true);
+}
+</script>
+</head>
+<body bgcolor="D8C8E1" >
+<div class="top">
+<div>
+Contact Us +91 96366 20000 / 01 | apj@hospital.com
+</div>
+</div>
+<div class="logo">
+<div>
+<table>
+<tr>
+<td width="600px" style="font-size:50px;font-family:forte;"> <font color="E55182"> APJ</font><font color="912045"> Hospital</font> </td>
+<td> <br> <br>
+<font size="4px">
+<a href="appointments.html">APPOINTMENTS</a>
+</font>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="bottom_up">
+<div>
+Make an Appointment
+<form name="myForm" onsubmit="return(validate());">
+<table cellspacing="15" cellpadding="1" border="1">
+<tr>
+<td align="right">Name</td>
+<td><input type="text" name="Name" /></td>
+</tr><br>
+<tr>
+<td align="right">EMail</td>
+<td><input type="text" name="EMail" /></td>
+</tr>
+<tr>
+<td align="right">Mobile no</td>
+<td> <input type="text" name="Mobile No"></td>
+</tr>
+<tr>
+<td align="right">Sex </td>
+<td> <select> <option> -- Sex -- </option> <option> Male </option> <option> Female </option> </select>
+</tr>
+<tr>
+<td align="right" > Appointment Date</td>
+<td><input type="text" name="appointment date" /></td>
+</tr>
+</tr>
+<tr>
+<td align="right"></td>
+<td><input type="submit" value="Submit" /></td>
+</tr>
+</table>
+</form>
+<div class="nav_down">
+<div>
+&copy; APJHospital
+</div>
+</div>
+</body>
+</html>
